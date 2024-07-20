@@ -1,0 +1,49 @@
+#updates-info-container {
+    background-color: #FEF6F6;
+    border-radius: 8px;
+    padding: 10px 6px 15px 10px;
+    margin-right: -7px;
+    font-family: Roboto400;
+    margin-bottom: 10px;
+}
+
+#update-title-version {
+    color:#F44848;
+    font-family: Roboto500;
+    padding: 5px 0px 3px 0px;
+}
+
+#update-description {
+    color: #BBC2C8;
+    font-size: 0.9em;
+    padding: 5px 0px;
+}
+
+.update-info {
+    padding-bottom: 10px;
+}
+
+.update-actions-btn {
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#update-dismiss-btn {
+    width: 70px;
+    height: 33px;
+    background-color: #FDE6E6;
+    border-radius: 8px;
+    border: none;
+    color: #F44848;
+}
+
+#update-accept-btn{
+    width: 70px;
+    height: 33px;
+    background-color: #F44848;
+    border-radius: 8px;
+    border: none;
+    color: white;
+}

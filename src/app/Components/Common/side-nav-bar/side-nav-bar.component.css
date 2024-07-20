@@ -1,0 +1,123 @@
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    color: #6A6F74;
+    margin: 0px 5px;
+}
+
+#side-nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 2em 0.7em 0 0.1em;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+#tezo-logo {
+    width: 100px;
+    margin-top: 1.47em;
+    margin-left: 1em;
+}
+
+#toggle-side-nav {
+    width: 2.4em;
+    margin-top: 1.6em;
+    position: absolute;
+    right: -1.5em;
+    cursor: pointer;
+}
+
+.side-nav-heading {
+    color: #BBC2C8;
+    font-family: Roboto500;
+    font-size: 0.8em;
+    padding: 1.1em 1.25em;
+}
+ 
+.nav-option {
+    display: flex;
+    justify-content: space-between;
+    font-family: Roboto500;
+    padding: 10px 9px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.nav-option span {
+    color: #83888bd0;
+}
+
+.selected-option {
+    display: none;
+}
+
+.active {
+    .nav-right-arrow {
+        color: #F44848C9;
+    }
+
+    .nav-option p {
+        color: #f44848c9;
+    }
+    
+    .nav-option {
+        background-color: #FDE9E9;
+        position: relative;
+    }
+
+    .selected-option {
+        display: block;
+    }
+}
+
+
+#nav-employees {
+    text-decoration: none;
+}
+
+.nav-option-left {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.nav-option-left p {
+    font-size: 0.95em;
+    padding-left: 10px;
+    font-family: Roboto700;
+    color: #6a6f74b0;
+}
+
+.nav-option-left img {
+    width: 20px;
+}
+
+.selected-option {
+    width: 4px;
+    border-radius: 5px 0 0 5px;
+    background-color: #F44848;
+    height: 39px;
+    position: absolute;
+    right: -15px;
+    top: 1px;
+}
+
+.management-section {
+    padding-top: 0.8em;
+}
+
+#nav-roles {
+    text-decoration: none;
+}

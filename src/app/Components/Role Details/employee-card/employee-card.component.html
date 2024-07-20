@@ -1,0 +1,31 @@
+<div class="employee-card">
+    <div class="employee-card-heading">
+        <img alt="Employee Avatar" src="{{employee.profilePicture}}">
+        <div>
+            <h4>{{employee.firstName}} {{employee.lastName}}</h4>
+            <p>{{employee.role ? employee.role.name : ' '}}</p>
+        </div>
+    </div>
+    <div class="employee-detail-card-info">
+        <div class="employee-detail-card-info-item">
+            <img id="employee-id-icon" alt="Employee Id Icon" src="../../../../assets/images/interface/id-card.svg">
+            <span>{{employee.empNo}}</span>
+        </div>
+        <div class="employee-detail-card-info-item">
+            <img alt="Email Icon" src="../../../../assets/images/interface/email.svg">
+            <span>{{employee.emailId}}</span>
+        </div>
+        <div class="employee-detail-card-info-item">
+            <img alt="Team Icon" src="../../../../assets/images/interface/team.svg">
+            <span>{{employee.department.name}}</span>
+        </div>
+        <div class="employee-detail-card-info-item">
+            <img alt="Location Icon" src="../../../../assets/images/interface/location-pin.svg">
+            <span>{{employee.location}}</span>
+        </div>
+    </div>
+    <div class="employee-card-view-all">
+        <span>View</span>
+        <img alt="Right Arrow Icon" src="../../../../assets/images/interface/arrow-right.svg">
+    </div>
+</div>

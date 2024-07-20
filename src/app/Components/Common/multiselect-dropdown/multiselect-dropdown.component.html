@@ -1,0 +1,9 @@
+<div class="multiselect" id="{{ dropdownType }}-dropdown" (click)="toggleDropdown($event)">
+    <div class="selected-options" id="{{ dropdownType }}-filter">{{ dropdownLabel.length === 0? dropdownType : dropdownLabel.join(", ") }}</div>
+    <div class="dropdown-content">
+        <label *ngFor="let option of options">
+            <input type="checkbox" [value]="option" (change)="updateSelectedOptions($event)">
+            <span>{{ option }}</span>
+        </label>
+    </div>
+</div>

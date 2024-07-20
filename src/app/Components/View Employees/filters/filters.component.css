@@ -1,0 +1,10 @@
+app-property-filters {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FDF2F2;
+    border: 1px solid #FBC0C0;
+    margin: 14px 0;
+    border-radius: 5px;
+    padding: 0px 10px;
+    height: 45px;
+}

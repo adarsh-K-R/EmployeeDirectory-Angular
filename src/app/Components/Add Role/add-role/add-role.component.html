@@ -1,0 +1,62 @@
+<div class="add-role-section">
+    <form #addRoleForm id="add-role-form" (ngSubmit)="submitRoleForm($event)">
+        <h3>Create New Role</h3>
+
+        <div class="role-department-section">
+            <div class="form-element">
+                <label for="role-name" class="required-field">Role Name</label>
+                <input [(ngModel)]="name" name="name" type="text" id="role-name" placeholder="Role Name" (blur)="validateInput($event)">
+                <span class="error-msg">&#9888; This field is required.</span>
+            </div>
+
+            <div class="form-element">
+                <label for="role-department" class="required-field">Department</label>
+                <select [(ngModel)]="departmentId" name="departmentId" id="role-department" (blur)="validateInput($event)">
+                    <option value="" selected disabled>Choose Department</option>
+                    <ng-container *ngFor="let department of departments">
+                        <option value="{{department.id}}">{{department.name}}</option>
+                    </ng-container>
+                </select>
+                <span class="error-msg">&#9888; This field is required.</span>
+            </div>
+        </div>
+
+        <div class="form-element">
+            <label for="role-description" class="required-field">Description</label>
+            <textarea [(ngModel)]="description" name="description" id="role-description" placeholder="Role Description" rows="10" (blur)="validateInput($event)"></textarea>
+            <span class="error-msg">&#9888; This field is required.</span>
+        </div>
+
+        <div class="form-element dropdown">
+            <label for="role-location" class="required-field">Location</label>
+            <select [(ngModel)]="location" name="location" id="role-location" (blur)="validateInput($event)">
+                <option value="" disabled selected>Choose location</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Delhi">Delhi</option>
+            </select>
+            <span class="error-msg">&#9888; This field is required.</span>
+        </div>
+
+        <div class="form-element dropdown">
+            <label>Assign Employees</label>
+            <div #employeeDropdown id="assign-employee-dropdown-container" data-toggle-state="collapsed" class="assign-employee" (click)="openEmployeeDropdown()">
+                <div #searchWrapper class="search-wrapper">
+                    <!-- Insert tokens here through ts -->
+                    <input [(ngModel)]="empSearch" name="empSearch" type="text" id="employee-search" (input)="showUpdatedEmployeeList()" (keydown)="handleTokenDelete($event)" placeholder="Search an Employee">                                    
+                    <img #toggleDropdownArrow alt="down arrow" src="../../../../assets/images/interface/arrow-down.png" (click)="toggleEmployeeDropdown($event)">
+                </div>
+                <div #employeeList class="employee-dropdown-list">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-buttons">
+            <span id="record-exists-error">&#9888; Role already exists.</span>
+            <a routerLink="/roles" routerLinkActive="active" id="cancel-btn">Cancel</a>
+            <input id="submit" type="submit" value="Add Role">
+        </div>
+    </form>
+</div>
+<router-outlet></router-outlet>

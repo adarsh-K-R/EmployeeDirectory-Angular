@@ -1,0 +1,19 @@
+<div id="alphabet-list">
+    <div class="radio-container">
+        <input type="radio" name="alphabet" id="filter-icon" value="" (change)="onAlphabetChange($event)" checked="true">
+        <label class="radio-label" for="filter-icon">
+            <img id="filter-logo" alt="Filter Icon" [src]="filterLogoSrc">
+        </label>
+    </div>
+
+    <div class="radio-container" *ngFor="let alphabet of alphabets">
+        <input
+            type="radio" 
+            name="alphabet" 
+            [id]="alphabet" 
+            [value]="alphabet" 
+            (change)="onAlphabetChange($event)">
+        <label class="radio-label" [for]="alphabet">{{ alphabet }}</label>
+    </div>
+
+</div>

@@ -1,0 +1,59 @@
+#alphabet-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.radio-container {
+    position: relative;
+}
+
+.radio-label {
+    position: absolute;
+    right: 11px;
+    top: 9px;
+    font-size: 1em;
+    color: #8592A3;
+    cursor: pointer;
+    font-family: Roboto400;
+}
+
+#alphabet-list input {
+    appearance: none;
+    border: 1px solid #EAEBEE;
+    background-color: #EAEBEE;
+    min-width: 30px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#alphabet-list #filter-icon {
+    appearance: none;
+    border: none;
+    background-color: white;
+    width: 30px;
+    height: 35px;
+    cursor: pointer;
+}
+
+#alphabet-list #filter-icon + label {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#alphabet-list img {
+    height: 35px;
+    background-color: #FCFCFC;
+}
+
+#alphabet-list input:checked {
+    background-color: #F44848;
+}
+
+#alphabet-list input:checked + .radio-label{
+    color: white;
+}

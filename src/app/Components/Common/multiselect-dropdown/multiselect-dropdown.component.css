@@ -1,0 +1,79 @@
+.selected-options {
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+
+.dropdown-content span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#Status-dropdown {
+    width: 70px;
+    background-position: 50px;
+    padding-right: 15px;
+}
+
+#Location-dropdown {
+    width: 80px;
+    background-position: 60px;
+    padding-right: 20px;
+}
+
+#Department-dropdown {
+    width: 100px;
+    background-position: 80px;
+    padding-right: 25px;
+}
+
+.multiselect {
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #FBC0C0;
+    padding: 8px 2px 8px 5px;
+    border-radius: 5px;
+    background-color: white;;
+    margin: 0px 3px;
+    color: #455573;
+    font-size: 0.9em;
+    font-family: Roboto400;
+    appearance: none;
+    background-image: url("../../../../assets/images/interface/arrow-down.png");
+    background-size: 9px;
+    background-repeat: no-repeat;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    border-radius: 5px;
+    left: 0;
+    top: 100%;
+    font-size: 0.9em;
+}
+
+.dropdown-content label {
+    display: flex;
+    align-items: center;
+    padding: 5px 5px 5px 5px;
+}
+
+.dropdown-content label:hover {
+    background-color: blue;
+    color: white;
+}
+
+.dropdown-content label input {
+    margin-right: 3px;
+}
+
+.dropdown-content.show {
+    display: block;
+}

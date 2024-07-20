@@ -1,0 +1,76 @@
+.employees-section-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+hgroup h3 {
+    padding: 10px 0;
+    font-family: Roboto400;
+    font-size: 1.05em;
+    color: #788693;
+}
+
+hgroup p {
+    padding: 4px 0;
+    font-size: 1em;
+    color: #A1ABB4;
+    font-family: Roboto400;
+}
+
+.employees-section-btns {
+    display: flex;
+    align-items: center;
+}
+
+#export-button {
+    display: flex;
+    background-color: white;
+    border: 1.5px solid #D8DBE0;
+    color: #949FAE;
+    border-radius: 8px;
+    height: 35px;
+    width: 110px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#export-button span {
+    padding-left: 8px;
+    font-family: Roboto500;
+}
+
+#add-employee-button {
+    display: flex;
+    background-color: #F44848;
+    border: 1px solid #F44848;
+    color: rgba(255, 255, 255, 0.828);
+    border-radius: 8px;
+    height: 38px;
+    width: 190px;
+    text-decoration: none;
+    margin-left: 15px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#add-employee-button img {
+    padding-right: 3px;
+    height: 22px;
+}
+
+#add-employee-button span {
+    width: 115px;
+    font-family: Roboto400;
+    font-size: 1.1em;
+}
+
+app-employee-table {
+    display: block;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}

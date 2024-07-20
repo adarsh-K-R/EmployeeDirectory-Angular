@@ -1,0 +1,26 @@
+<div class="role-details">
+    <div class="role-details-section-heading">
+        <hgroup>
+            <!-- Heading and sub-heading here -->
+            <h3><a href="roles.html">Roles</a><span class="forward-arrow">&#10095;</span>Employees</h3>
+            <p>All the roles are configured here.</p>
+        </hgroup>
+        <a id="add-emp-button" href="./add-employee.html">
+            <img alt="Add icon" src="../../../../assets/images/interface/add.svg">
+            <span>ADD EMPLOYEE</span>
+        </a>
+    </div>
+
+    <div class="roles-info">
+        <h3>Role Description</h3>
+        <p>Configure the providers that are available to users when they sign in. Configure the providers that are available to users when they sign in. Configure the providers that are available to users when they sign in. Configure the providers that are available to users when they sign in.</p>
+    </div>
+
+    <!-- Different roles will show here -->
+
+    <div class="role-detail-container">
+        <ng-container *ngFor="let employee of filteredEmployees">
+            <app-employee-card [employee]="employee"></app-employee-card>
+        </ng-container>
+    </div>
+</div>

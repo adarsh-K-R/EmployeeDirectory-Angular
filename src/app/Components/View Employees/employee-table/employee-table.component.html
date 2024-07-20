@@ -1,0 +1,119 @@
+<div class="employees-table-actions">
+    <!-- Delete table and add table icons here -->
+    <div class="delete-employee">
+        <img alt="Down Left Arrow" src="../../../../assets/images/interface/arrow-left-down.svg">
+        <button id="delete-btn" type="button" (click)="deleteSelectedRows()" [disabled]="(selectedEmployees.length === 0)">Delete</button>
+    </div>
+    <img alt="Add Table" src="../../../../assets/images/interface/table-add.svg">
+</div>
+<!-- Actual table here -->
+<div class="employee-table-wrapper">
+    <table id="employee-table">
+        <thead id="employee-table-header">
+            <tr>
+                <th id="all-employee-select-checkbox" class="employee-table-header-column">
+                    <input 
+                        class="check-box" 
+                        id="select-all-checkbox" 
+                        type="checkbox" 
+                        (click)="toggleAllCheckbox($event)"
+                        [checked]="(selectedEmployees.length === employees.length && employees.length !== 0)">
+                </th>
+                <th class="employee-table-header-column" (click)="sort('firstName')">
+                    <span>USER</span>
+                    <div class="sort-option">
+                        <img alt="up-arrow" [src]="getArrowImage('firstName','up')">
+                        <img alt="down-arrow" [src]="getArrowImage('firstName','down')">
+                    </div>
+                </th>
+                <th class="employee-table-header-column" (click)="sort('location')">
+                    <span>LOCATION</span>
+                    <div class="sort-option">
+                        <img alt="up-arrow" [src]="getArrowImage('location','up')">
+                        <img alt="down-arrow" [src]="getArrowImage('location','down')">
+                    </div>
+                </th>
+                <th class="employee-table-header-column" id="department-column" (click)="sort('department')">
+                    <span>DEPARTMENT</span>
+                    <div class="sort-option">
+                        <img alt="up-arrow" [src]="getArrowImage('department','up')">
+                        <img alt="down-arrow" [src]="getArrowImage('department','down')">
+                    </div>
+                </th>
+                <th class="employee-table-header-column" id="roles-column" (click)="sort('role')">
+                    <span>ROLE</span>
+                    <div class="sort-option">
+                        <img alt="up-arrow" [src]="getArrowImage('role','up')">
+                        <img alt="down-arrow" [src]="getArrowImage('role','down')">
+                    </div>
+                </th>
+                <th class="employee-table-header-column"  (click)="sort('empNo')">
+                    <span>EMP NO</span>
+                    <div class="sort-option">
+                        <img alt="up-arrow" [src]="getArrowImage('empNo','up')">
+                        <img alt="down-arrow" [src]="getArrowImage('empNo','down')">
+                    </div>
+                </th>
+                <th class="employee-table-header-column" id="employee-table-header-column-status" (click)="sort('status')">
+                    <span>STATUS</span>
+                    <div class="sort-option">
+                        <img alt="up-arrow" [src]="getArrowImage('status','up')">
+                        <img alt="down-arrow" [src]="getArrowImage('status','down')">
+                    </div>
+                </th>
+                <th class="employee-table-header-column" (click)="sort('joinDate')">
+                    <span>JOIN DT</span>
+                    <div class="sort-option">
+                        <img alt="up-arrow" [src]="getArrowImage('joinDate','up')">
+                        <img alt="down-arrow" [src]="getArrowImage('joinDate','down')">
+                    </div>
+                </th>
+                <th class="employee-table-header-column"><span class="header-ellipses">&#8943;</span></th>
+            </tr>
+        </thead>
+        <tbody id="employee-table-body">
+            
+            <ng-container *ngFor="let employee of employees">
+                <tr> 
+                    <td class="select-employee-checkbox"> 
+                        <input 
+                            class="row-checkbox check-box"
+                            type="checkbox" 
+                            [checked]="selectedEmployees.includes(employee.empNo)"
+                            id="{{employee.empNo}}"
+                            (change)="handleSelectedEmployee($event)">
+                    </td>
+                    <td class="employee-cell-info">
+                        <img class="employee-image" alt="Employee" src="{{employee.profilePicture}}">
+                        <div class="employee-cell-name-email">
+                            <p class="employee-cell-name">{{employee.firstName}} {{employee.lastName}}</p>
+                            <p class="employee-cell-email">{{employee.emailId}}</p>
+                        </div>
+                    </td>
+                    <td>{{employee.location}}</td>
+                    <td>{{employee.department.name}}</td>
+                    <td>{{ employee.role ? employee.role.name : 'NA' }}</td>
+                    <td>{{employee.empNo}}</td>
+                    <td>
+                        <div class="employee-status {{(employee.status === 'Inactive' ? 'inactive' : '')}}">
+                            {{employee.status}}
+                        </div>
+                    </td>
+                    <td>{{employee.joinDate}}</td>
+                    <td class='ellipses'>
+                        <span class="ellipses-span" (click)="toggleEmployeeActionsPopup($event)">
+                            &#8943;
+                        </span>
+                        <div class="ellipses-popup">
+                            <p>View</p>
+                            <hr>
+                            <p>Edit</p>
+                            <hr>
+                            <p>Delete</p>
+                        </div>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

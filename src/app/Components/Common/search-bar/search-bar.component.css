@@ -1,0 +1,115 @@
+.top-nav-bar{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.22);
+    border-radius: 10px;
+    background-color: white;
+    height: 63px;
+    padding: 10px;
+}
+
+.search-input-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+#search-icon {
+    padding-left: 10px;
+    height: 22px;
+}
+
+.search-input {
+    border: none;
+    width: 90%;
+    font-size: 1.15em;
+    padding: 10px;
+}
+
+::placeholder {
+    opacity: 0.3;
+    font-family: Roboto500;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.top-nav-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.top-nav-items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.quick-action-icon {
+    height: 35px;
+    width: 35px;
+}
+
+.quick-action-icon:nth-child(4) {
+    height: 40px;
+    width: 40px;
+}
+
+.profile-section {
+    display: flex;
+    width: 150px;
+}
+
+.profile-picture {
+    position: relative;
+}
+
+.profile-status {
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+    height: 11px;
+    width: 11px;
+    background-color: #28C76F;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+#profile-image {
+    height: 35px;
+    width: 35px;
+}
+
+.user-details {
+    padding-left: 8px;
+    padding-right: 5px;
+}
+
+#user-name {
+    font-size: 0.8em;
+    padding-top: 2px;
+    color: rgba(0, 0, 0, 0.582);
+    font-family: Roboto700;
+}
+
+#user-title {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding-top: 3px;
+}
+
+.down-arrow, .table-sort-arrow {
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+#down-arrow {
+    margin-top: 5px;
+    height: 25px;
+    width: 25px;
+}

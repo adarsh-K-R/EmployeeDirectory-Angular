@@ -1,0 +1,120 @@
+<div class="add-employee-section">
+    <div class="toast-section">
+        <app-toast [message]="toastMessage" [toastType]="toastType" [duration]="toastDuration" [show]="showToast"></app-toast>
+    </div>
+    <form #addEmployeeForm id="add-employee-form" (ngSubmit)="submitForm($event)">
+        <h3>Add Employee</h3>
+        <div class="upload-image-container">
+            <img #profileImage id="preview-img" alt="User Icon" src="../../../../assets/images/interface/profile.png">
+            <label for="profile-pic">Upload Profile Picture</label>
+            <input name="image" type="file" accept="image/*" id="profile-pic" style="display: none;" (change)="updatePreviewImage($event)">
+        </div>
+
+        <h4>Personal Information</h4>
+        <div class="form-element">
+            <label for="emp-no" class="required-field">Emp No.</label>
+            <input name="empNo" type="text" id="emp-no" placeholder="Ex: TZ0123" [(ngModel)]="empNo" (blur)="validateEmpNo()">
+            <span #empError class="error-msg">&#9888; This field is required.</span>
+        </div>
+        
+        <div class="name-dob-section">
+            <div class="form-element">
+                <label for="first-name" class="required-field">First Name</label>
+                <input name="firstName" type="text" id="first-name" placeholder="Text" [(ngModel)]="firstName" (blur)="validateFirstName()">
+                <span #firstNameError class="error-msg">&#9888; This field is required.</span>
+            </div>
+
+            <div class="form-element">
+                <label for="last-name" class="required-field">Last Name</label>
+                <input name="lastName" type="text" id="last-name" placeholder="Text" [(ngModel)]="lastName" (blur)="validateLastName()">
+                <span #lastNameError class="error-msg">&#9888; This field is required.</span>
+            </div>
+
+            <div id="date-picker" class="form-element">
+                <label for="dob">Date of Birth</label>
+                <input #dateOfBirth name="dob" type="date" id="dob" [(ngModel)]="dob" placeholder="Select">
+                <!-- yyyy-mm-dd -->
+            </div>
+        </div>
+
+        <div class="email-mobile-section">
+            <div class="form-element">
+                <label for="email" class="required-field">Email Id</label>
+                <input name="email" type="text" id="email" placeholder="Joe.j@technovert.com" [(ngModel)]="email" (blur)="validateEmail()">
+                <span #emailError class="error-msg">&#9888; This field is required.</span>
+            </div>
+
+            <div class="form-element">
+                <label for="mobile-no">Mobile Number</label>
+                <input name="mobileNo" type="tel" id="mobile-no" placeholder="0000000000" maxlength="10" [(ngModel)]="mobileNo" (blur)="validateMobileNo()">
+                <span #mobileNoError class="error-msg">&#9888; Please enter 10 digits.</span>
+            </div>
+        </div>
+
+        <h4>Employement Information</h4>
+        <div class="emp-info-grid">
+            <div class="form-element grid">
+                <label for="join-date" class="required-field">Joining Date</label>
+                <input name="joinDate" type="date" id="join-date" placeholder="12/08/2023" [(ngModel)]="joinDate" (blur)="validateInput($event)">
+                <span #joinDateError class="error-msg">&#9888; This field is required.</span>
+            </div>
+
+            <div class="form-element grid">
+                <label for="location" class="required-field">Location</label>
+                <select name="location" id="location" [(ngModel)]="location" (blur)="validateInput($event)">
+                    <option value="" disabled selected>Location </option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Delhi">Delhi</option>
+                </select>
+                <span #locationError class="error-msg">&#9888; This field is required.</span>
+            </div>
+
+            <div class="form-element grid">
+                <label for="job-title" class="required-field">Job Title</label>
+                <select name="roleId" [(ngModel)]="roleId" id="job-title">
+                    <option value="" disabled selected>Job Title (Choose department first)</option>
+                </select>
+                <span #roleError class="error-msg">&#9888; This field is required.</span>
+            </div>
+
+            <div class="form-element grid">
+                <label for="department" class="required-field">Department</label>
+                <select name="departmentId" [(ngModel)]="departmentId" id="department" (change)="populateJobTitle()" (blur)="validateInput($event)">
+                    <option value="" disabled selected>Department</option>
+                    <ng-container *ngFor="let department of departments">
+                        <option value="{{department.id}}">{{department.name}}</option>
+                    </ng-container>
+                </select>
+                <span #departmentError class="error-msg">&#9888; This field is required.</span>
+            </div>
+
+            <div class="form-element grid">
+                <label for="assign-manager">Assign Manager</label>
+                <select name="manager" [(ngModel)]="manager" id="assign-manager">
+                    <option value="" disabled selected>Select</option>
+                    <option value="manager1">Manager 1</option>
+                    <option value="manager2">Manager 2</option>
+                    <option value="manager3">Manager 3</option>
+                </select>
+            </div>
+
+            <div class="form-element grid">
+                <label for="assign-project" class="required-field">Assign Project</label>
+                <select name="projectId" [(ngModel)]="projectId" id="assign-project">
+                    <option value="" disabled selected>Select</option>
+                    <ng-container *ngFor="let project of projects">
+                        <option value="{{project.id}}">{{project.name}}</option>
+                    </ng-container>
+                </select>
+                <span #projectError class="error-msg">&#9888; This field is required.</span>
+            </div>
+        </div>
+
+        <div class="form-buttons">
+            <a routerLink="/employees" routerLinkActive="active" ariaCurrentWhenActive="page" id="cancel-btn">Cancel</a>
+            <input id="submit" class="submit-details" type="submit" value="Add Employee">
+        </div>
+    </form>
+</div>
+<router-outlet></router-outlet>

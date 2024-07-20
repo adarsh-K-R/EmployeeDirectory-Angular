@@ -1,0 +1,31 @@
+<div class="employees-section-heading">
+    <hgroup>
+        <!-- Heading and sub-heading here -->
+        <h3>Employees</h3>
+        <p>Find all of your company's employee accounts and their associated roles.</p>
+    </hgroup>
+    <div class="employees-section-btns">
+        <!-- Export and add employee buttons here -->
+        <button id="export-button" type="button" (click)= tableToCSV()>
+            <img id="export-icon" alt="Export Icon" src="../../../../assets/images/interface/export.svg">
+            <span>EXPORT</span>
+        </button>
+        <a id="add-employee-button" routerLink="/employees/add-employee" routerLinkActive="active">
+            <img alt="Add icon" src="../../../../assets/images/interface/add.svg">
+            <span>ADD EMPLOYEE</span>
+        </a>
+    </div>
+</div>
+
+<app-filters 
+    (selectedAlphabet)="handleSelectedAlphabet($event)"
+    (selectedOptions)="handleSelectedProperties($event)"
+    (resetFilters)="resetPropertyFilter()"></app-filters>
+
+<app-employee-table 
+    *ngIf="employees.length > 0" 
+    [employees]="employees"
+    (sortData)="sort($event)"
+    (employeesToDelete)="delete($event)"></app-employee-table>
+
+<router-outlet></router-outlet>

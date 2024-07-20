@@ -1,0 +1,86 @@
+.role-details {
+    height: calc(100vh - 73px);
+    overflow-y: auto;
+}
+
+.role-details-section-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    align-items: center;
+}
+
+.forward-arrow {
+    padding: 0 10px;
+    font-size: 0.8em;
+    color: #A1ABB4;
+}
+
+hgroup h3 {
+    padding: 10px 0;
+    font-family: Roboto400;
+    font-size: 1.05em;
+    color: #788693;
+}
+
+hgroup a {
+    text-decoration: none;
+    padding: 10px 0;
+    font-family: Roboto400;
+    font-size: 1.05em;
+    color: #788693;
+}
+
+hgroup p {
+    padding: 4px 0;
+    font-size: 1em;
+    color: #A1ABB4;
+    font-family: Roboto400;
+}
+
+#add-emp-button {
+    display: flex;
+    background-color: #F44848;
+    border: 1px solid #F44848;
+    color: rgba(255, 255, 255, 0.828);
+    border-radius: 8px;
+    height: 38px;
+    text-decoration: none;
+    width: 190px;
+    margin-left: 15px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#add-emp-button span {
+    padding-left: 8px;
+}
+
+.roles-info {
+    padding: 5px 0;
+}
+
+.roles-info h3 {
+    font-family: Roboto400;
+    font-size: 1.2em;
+}
+
+.roles-info p {
+    padding: 10px 0;
+    color: #a1abb4df;
+    font-family: Roboto500;
+    font-size: 0.9em;
+    line-height: 20px;
+}
+
+/* Roles card styles */
+
+.role-detail-container {
+    display: grid;
+    justify-content: start;
+    grid-template-columns: repeat(auto-fit, 320px);
+    grid-auto-rows: minmax(215px, auto);
+    gap: 15px;
+    color: grey;
+}

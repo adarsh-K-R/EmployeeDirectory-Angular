@@ -1,0 +1,39 @@
+<div class="roles-card">
+    <div class="roles-card-heading">
+        <h3>{{role?.name}}</h3>
+        <img alt="Edit Icon" src="../../../../assets/images/interface/edit.svg">
+    </div>
+    <div class="roles-card-details">
+        <div class="roles-card-details-item">
+            <div class="card-icon-title">
+                <img alt="Team Icon" src="../../../../assets/images/interface/team.svg">
+                <span>Department</span>
+            </div>
+            <p class="role-department">{{role?.department?.name}}</p>
+        </div>
+        <div class="roles-card-details-item">
+            <div class="card-icon-title">
+                <img alt="Location Icon" src="../../../../assets/images/interface/location-pin.svg">
+                <span>Location</span>
+            </div>
+            <p class="role-location">{{role?.location}}</p>
+        </div>
+        <div class="roles-card-details-item">
+            <span>Total Employees</span>
+            <span class="total-employees-icons">
+                <img class="icon-1" src="../../../../assets/images/profile-pics/female-dark-blue.svg" alt="Profile Avatar">
+                <img class="icon-2" src="../../../../assets/images/profile-pics/female-yellow.svg" alt="Profile Avatar">
+                <img class="icon-3" src="../../../../assets/images/profile-pics/male-green.svg" alt="Profile Avatar">
+                <img class="icon-4" src="../../../../assets/images/profile-pics/male-purple.svg" alt="Profile Avatar">
+                <div class="total-count">+43</div>
+            </span>
+        </div>
+    </div>
+    <!-- <a href="role-details.html?id={{role.id}}" class="view-all-employees"> -->
+    <a [routerLink]="['/roles', role?.id]" routerLinkActive="active" class="view-all-employees">
+        <div class="roles-card-view-all">
+            <span>View all Employees</span>
+            <img alt="Right Arrow Icon" src="../../../../assets/images/interface/arrow-right.svg">
+        </div>
+    </a>
+</div>

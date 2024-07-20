@@ -1,0 +1,93 @@
+.roles-card {
+    border: 1.5px solid #D8DBE0;
+    border-radius: 8px;
+    padding: 35px 20px 20px 20px;
+}
+
+.roles-card-heading {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    color: black;
+    font-size: 0.9em;
+}
+
+.roles-card-heading img {
+    height: 22px;
+}
+
+.roles-card-details-item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.card-icon-title {
+    display: flex;
+}
+
+.card-icon-title img {
+    height: 14px;
+}
+
+.card-icon-title span {
+    padding-left: 2px;
+}
+
+.total-employees-icons {
+    position: relative;
+    display: flex;
+}
+
+.total-employees-icons img {
+    height: 17px;
+    position: absolute;
+    border: 1.5px solid white;
+    border-radius: 10px;
+}
+
+.icon-1 {
+    right: 36px;
+}
+
+.icon-2 {
+    right: 27px;
+}
+
+.icon-3 {
+    right: 18px;
+}
+
+.icon-4 {
+    right: 9px;
+}
+
+.total-count {
+    height: 17px;
+    width: 17px;
+    position: absolute;
+    border-radius: 10px;
+    background-color: white;
+    right: 0;
+    font-size: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roles-card-view-all {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+}
+
+.roles-card-view-all span {
+    padding-right: 5px;
+    font-size: 0.8em;
+    color: grey;
+}
+
+.view-all-employees {
+    text-decoration: none;
+}

@@ -1,0 +1,7 @@
+<app-alphabetical-filter (selectedAlphabet)="onAlphabetSelected($event)"></app-alphabetical-filter>
+<app-property-filters 
+    (properties)="properties($event)"
+    (resetFilters)="reset()" 
+    [isStatus]="true"
+>
+</app-property-filters>

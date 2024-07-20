@@ -1,0 +1,131 @@
+.add-employee-section {
+    padding: 30px 10px 10px 10px;
+}
+
+#add-employee-form h3 {
+    font-family: Roboto300;
+    font-size: 1.3em;
+}
+
+.upload-image-container {
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+}
+
+.upload-image-container img {
+    height: 80px;
+    width: 80px;
+}
+
+.upload-image-container label {
+    margin-left: 20px;
+    border-radius: 5px;
+    background-color: #F44848;
+    color: rgba(255, 255, 255, 0.881);
+    padding: 8px 15px;
+    font-family: Roboto400;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+#add-employee-form h4 {
+    padding-top: 30px;
+    font-size: 1em;
+    font-family: Roboto400;
+}
+
+.form-element {
+    display: inline-flex;
+    flex-direction: column;
+    padding-top: 25px;
+    width: 215px;
+    margin-right: 20px;
+}
+
+.form-element label {
+    padding-bottom: 5px;
+    color: #787D88;
+}
+
+.form-element input {
+    border: 2px solid #DFE1E6;
+    border-radius: 5px;
+    background-color: #FAFBFC;
+}
+
+.form-element select {
+    border: none;
+    background-color: #F4F5F7;
+}
+
+.form-element input,select {
+    height: 35px;
+    padding: 5px;
+}
+
+.form-element input:focus, select:focus {
+    outline-color: #4C9AFF;
+}
+
+.name-dob-section {
+    display: flex;
+}
+
+.email-mobile-section {
+    display: flex;
+}
+
+.grid {
+    width: 350px;
+    padding-top: 5px;
+}
+
+.emp-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.form-buttons input {
+    height: 35px;
+    width: 110px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+#cancel-btn {
+    background-color: #FBEBEB;
+    color: #F44848;
+    text-decoration: none;
+    height: 35px;
+    width: 110px;
+    margin-right: 10px;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 9px;
+}
+
+#submit {
+    background-color: #F44848;
+    color: white;
+}
+
+.error-msg {
+    display: none;
+    font-size: 0.6em;
+    color: red;
+}
+
+.required-field::after {
+    content: "*";
+    color: red;
+}

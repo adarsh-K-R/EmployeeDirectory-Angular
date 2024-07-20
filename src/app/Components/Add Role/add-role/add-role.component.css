@@ -1,0 +1,218 @@
+.required-field::after {
+    content: "*";
+    color: red;
+}
+
+.error-msg {
+    display: none;
+    font-size: 0.6em;
+    color: red;
+}
+
+#record-exists-error {
+    display: none;
+    font-size: 1em;
+    color: red;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.add-role-section {
+    padding: 30px 10px 30px 10px;
+    height: calc(100vh - 73px);
+    overflow-y: auto;
+}
+
+#add-role-form h3 {
+    font-family: Roboto300;
+    font-size: 1.3em;
+}
+
+.role-department-section {
+    display: flex;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    min-width: 235px;
+    margin-right: 10px;
+}
+
+.form-element label {
+    padding-bottom: 5px;
+    color: #787D88;
+}
+
+.form-element input, textarea {
+    border: 2px solid #DFE1E6;
+    border-radius: 5px;
+    background-color: #FAFBFC;
+}
+
+.form-element select {
+    border: none;
+    background-color: #F4F5F7;
+}
+
+.form-element input,select {
+    height: 35px;
+    padding: 5px;
+}
+
+.form-element textarea {
+    padding: 5px;
+}
+
+.form-element input:focus, select:focus, textarea:focus {
+    outline-color: #4C9AFF;
+}
+
+#role-description {
+    width: 480px;
+}
+
+.dropdown {
+    width: 350px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.form-buttons input {
+    height: 35px;
+    width: 110px;
+    border: none;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+#assign-employees {
+    background-image: url('../../../../assets/images/interface/arrow-down.png');
+    background-position: 330px;
+    background-size: 10px;
+    background-repeat: no-repeat;
+}
+
+#cancel-btn {
+    background-color: #FBEBEB;
+    color: #F44848;
+    text-decoration: none;
+    height: 35px;
+    width: 110px;
+    margin-right: 10px;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 9px;
+}
+
+#submit {
+    background-color: #F44848;
+    color: white;
+    cursor: pointer;
+}
+
+.pic-name {
+    display: flex;
+    align-items: center;
+}
+
+.emp-name {
+    padding-left: 10px;
+}
+
+.profile-pic {
+    height: 25px;
+    width: 25px;
+}
+
+.search-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #DFE1E6;
+    border-radius: 5px;
+    background-color: #FAFBFC;
+    padding-right: 30px;
+    align-items: center;
+}
+
+.search-wrapper img {
+    height: 10px;
+    position: absolute;
+    right: 8px;
+    top: 13px;
+}
+
+#employee-search {
+    flex-grow: 1;
+    width: 140px;
+    border: none;
+    outline: none;
+    text-indent: 5px;
+}
+
+.token {
+    border: 1px solid #d9d9d9;
+    background-color: #ededed;
+    border-radius: 3px;
+    margin: 5px 0px 6px 5px;
+    padding: 4px;
+    font-size: 0.7em;
+    user-select: none;
+    cursor: default;
+}
+
+.token button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    padding: 0;
+    margin-left: 3px;
+    font-size: 1.3em;
+    color: grey;
+    cursor: pointer;
+}
+
+.employee-dropdown-list {
+    max-height: 200px;
+    display: none;
+    overflow-y: auto;
+}
+
+.employee-dropdown-list.show {
+    display: block;
+    z-index: 1000;
+}
+
+.emp-photo {
+    height: 30px;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 29px 5px 12px;
+    border: 2px solid #DFE1E6;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    min-height: 31px;
+    color: #787D88;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #FBEBEB;
+}
+
+.dropdown-item span {
+    margin-left: 10px;
+}
+
+.expanded {
+    transform: rotate(180deg);
+}

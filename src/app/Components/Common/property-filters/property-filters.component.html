@@ -1,0 +1,43 @@
+<div class="property-filter-options">
+    <p>Filter</p>
+    <img alt="Filter Icon" src="../../../../assets/images/interface/menu.png">
+    
+    <app-multiselect-dropdown
+        *ngIf="isStatus"
+        [options]="statusOptions"
+        dropdownType="Status"
+        (selectedOptions)="handleStatuses($event)"
+        [dropdownLabel]="selectedStatuses">
+    </app-multiselect-dropdown>
+
+    <app-multiselect-dropdown
+        [options]="locationOptions"
+        dropdownType="Location"
+        (selectedOptions)="handleLocations($event)"
+        [dropdownLabel]="selectedLocations">
+    </app-multiselect-dropdown>
+
+    <app-multiselect-dropdown
+        [options]="departmentOptions"
+        dropdownType="Department"
+        (selectedOptions)="handleDepartments($event)"
+        [dropdownLabel]="selectedDepartments">
+    </app-multiselect-dropdown>
+
+</div>
+<div class="filter-action-buttons">
+    <button 
+        id="filter-reset" 
+        type="button" 
+        (click)="reset()" 
+        [disabled]="selectedStatuses.length === 0 && selectedLocations.length === 0 && selectedDepartments.length === 0">
+        Reset
+    </button>
+    <button 
+        id="filter-apply" 
+        type="button" 
+        (click)="apply()" 
+        [disabled]="selectedStatuses.length === 0 && selectedLocations.length === 0 && selectedDepartments.length === 0">
+        Apply
+    </button>
+</div>

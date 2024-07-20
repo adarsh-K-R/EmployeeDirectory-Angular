@@ -1,0 +1,31 @@
+<div class="roles-section-heading">
+    <hgroup>
+        <!-- Heading and sub-heading here -->
+        <h3>Roles</h3>
+        <p>All the roles are configured here.</p>
+    </hgroup>
+    <!-- Add role buttons here -->
+    <a id="add-role-button" routerLink="/roles/add-role" routerLinkActive="active">
+        <img alt="Add icon" src="../../assets/images/interface/add.svg">
+        <span>ADD ROLE</span>
+    </a>
+</div>
+
+<!-- Filtering options here -->
+
+<app-property-filters 
+    [isStatus]="false"
+    (properties)="properties($event)"
+    (resetFilters)="resetFilters()"
+    ></app-property-filters>
+
+<!-- Different roles will show here -->
+
+<div class="roles-container">
+
+    <ng-container *ngFor="let role of roles">
+        <app-role-card [role]="role"></app-role-card>
+    </ng-container>
+    
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,59 @@
+<nav id="side-nav" class="side-nav">
+    <div class="logo-container">
+        <!-- Logo and nav-bar minimise button here -->
+        <img id="tezo-logo" alt="Tezo Logo" src="../../../../assets/images/side-navbar/tezo-logo.svg">
+        <img id="toggle-side-nav" alt="Side navbar toggle button" src="../../../../assets/images/side-navbar/toggle-side-nav.png" (click) = toggleSideNav()>
+    </div>
+    <div id="side-nav-wrapper">
+        <div id="side-nav-items">
+            <div class="all-pages-section">
+                <!-- Different Pages option here -->
+                <p class="side-nav-heading">ALL</p>
+                <!-- Nav Dashboard -->
+                <div class="nav-option" id="nav-dashboard">
+                    <div class="nav-option-left">
+                        <img class="nav-icon" alt="Lock icon" src="../../../../assets/images/side-navbar/dashboard.svg">
+                        <p class="nav-option-title">Dashboard</p>
+                    </div>
+                </div>
+                <a routerLink="/employees" routerLinkActive="active" id="nav-employees">
+                    <div class="nav-option">
+                        <div class="nav-option-left">
+                            <img class="nav-icon" alt="Home Smile icon" 
+                            [src]="isActive('/employees') ? '../../../../assets/images/side-navbar/employees.svg' : '../../../../assets/images/side-navbar/employees-black.svg'">
+                            <p class="nav-option-title">Employees</p>
+                        </div>
+                        <div class="selected-option"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="management-section">
+                <!-- Role/User management options here -->
+                <p class="side-nav-heading">ROLE / USER MANAGEMENT</p>
+                <!-- Nav Roles -->
+                <a routerLink="/roles" routerLinkActive="active" id="nav-roles">
+                    <div class="nav-option">
+                        <div class="nav-option-left">
+                            <img class="nav-icon" alt="Lock icon" 
+                            [src]="isActive('/roles') ? '../../../../assets/images/side-navbar/roles-orange.svg' : '../../../../assets/images/side-navbar/roles.svg'">
+                            <p class="nav-option-title">Roles</p>
+                        </div>
+                        <div class="selected-option"></div>
+                        <span class="nav-right-arrow">&#10095;</span>
+                    </div>
+                </a>
+                
+                <!-- Nav Assign User Roles -->
+                <div class="nav-option" id="nav-access-rights">
+                    <div class="nav-option-left">
+                        <img class="nav-icon" alt="Lock icon" src="../../../../assets/images/side-navbar/assign-user.svg">
+                        <p class="nav-option-title">Access Rights</p>
+                    </div>
+                    <span class="nav-right-arrow">&#10095;</span>
+                </div>
+            </div>
+        </div>
+        <app-install-updates></app-install-updates>
+    </div>
+</nav>
+<router-outlet></router-outlet>

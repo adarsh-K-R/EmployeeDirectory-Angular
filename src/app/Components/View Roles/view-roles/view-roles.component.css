@@ -1,0 +1,64 @@
+/* .roles {
+    height: calc(100vh - 73px);
+    overflow-y: auto;
+} */
+
+.roles-section-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    align-items: center;
+}
+
+hgroup h3 {
+    padding: 10px 0;
+    font-family: Roboto400;
+    font-size: 1.05em;
+    color: #788693;
+}
+
+hgroup p {
+    padding: 4px 0;
+    font-size: 1em;
+    color: #A1ABB4;
+    font-family: Roboto400;
+}
+
+#add-role-button {
+    display: flex;
+    background-color: #F44848;
+    border: 1px solid #F44848;
+    color: rgba(255, 255, 255, 0.828);
+    border-radius: 8px;
+    text-decoration: none;
+    height: 38px;
+    width: 140px;
+    margin-left: 15px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#add-role-button span {
+    padding-left: 8px;
+}
+
+app-property-filters {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FDF2F2;
+    border: 1px solid #FBC0C0;
+    margin: 14px 0;
+    border-radius: 5px;
+    padding: 0px 10px;
+    height: 45px;
+}
+
+.roles-container {
+    display: grid;
+    justify-content: start;
+    grid-template-columns: repeat(auto-fit, 321px);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 15px;
+    color: #738096;
+}

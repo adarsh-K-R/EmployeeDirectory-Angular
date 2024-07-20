@@ -1,0 +1,76 @@
+@font-face {
+    font-family: Roboto100;
+    src: url(./assets/fonts/Roboto/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: Roboto300;
+    src: url(./assets/fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: Roboto400;
+    src: url(./assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto500;
+    src: url(./assets/fonts/Roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: Roboto700;
+    src: url(./assets/fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: Roboto900;
+    src: url(./assets/fonts/Roboto/Roboto-Black.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+app-root {
+    display: grid;
+    grid-template-columns: 18.5% 81.5%;
+    font-size: 14px;
+    font-family: Roboto500;
+    background-color: #FCFCFC;
+}
+
+app-root.side-nav-collapse {
+    grid-template-columns: 6.5% 93.5%;
+}
+
+app-root.side-nav-collapse #tezo-logo {
+    content: url('./assets/images/side-navbar/tezo-logo-minimised.svg');
+}
+
+app-root.side-nav-collapse #toggle-side-nav {
+    transform: rotate(180deg);
+}
+
+app-root.side-nav-collapse .side-nav-heading, 
+app-root.side-nav-collapse .nav-option-title, 
+app-root.side-nav-collapse .nav-right-arrow, 
+app-root.side-nav-collapse #updates-info-container {
+    display: none;
+}
+
+app-root{
+    transition: grid-template-columns 0.5s;
+}
+
+app-root #toggle-side-nav {
+    transition: transform 0.5s;
+}
+
+app-login {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
